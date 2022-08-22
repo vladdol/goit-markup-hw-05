@@ -18,7 +18,6 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  position: relative;
 }
 
 a {
@@ -58,6 +57,11 @@ h2 {
 
 header {
   border-bottom: 1px solid #ececec;
+
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 .head-container {
@@ -100,6 +104,8 @@ header {
 .nav-links a {
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links li + li {
@@ -119,6 +125,8 @@ header {
   padding-top: 32px;
   padding-bottom: 32px;
   fill: var(--general-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact a + a {
@@ -129,10 +137,6 @@ header {
 .smartphone-header {
   display: flex;
   align-items: center;
-}
-
-.envelope-header,
-.smartphone-header {
   margin-right: 10px;
 }
 
@@ -161,7 +165,7 @@ header {
 
   transform: scaleX(0);
   transform-origin: center left;
-  transition: transform 50ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-nav:hover::before {
@@ -235,8 +239,9 @@ header {
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  z-index: 1;
 
-  transform: opacity 50ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -447,16 +452,14 @@ ul.works-pic {
   width: 44px;
   height: 44px;
   padding: 12px;
-}
 
-.icon-part {
   fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon:hover,
-.team-icon:focus,
-.team-icon:hover .icon-part,
-.team-icon:focus .icon-part {
+.team-icon:focus {
   fill: var(--bg-color);
   background-color: var(--accent-color);
 }
@@ -478,18 +481,16 @@ ul.works-pic {
 .customers-part {
   display: block;
   border: 1px solid #afb1b8;
+  fill: #afb1b8;
   padding: 16px 32px;
   border-radius: 4px;
   width: 170px;
   height: 92px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-one {
-  fill: #afb1b8;
-}
-
-.customers-part:hover .customers-one,
-.customers-part:focus .customers-one,
 .customers-part:hover,
 .customers-part:focus {
   fill: var(--accent-color);
@@ -525,6 +526,10 @@ address ul {
 
 address li + li {
   margin-top: 9px;
+}
+
+address a {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 address a:hover,
@@ -595,6 +600,10 @@ footer .icon-part {
 
   padding: 6px 22px;
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-buttons button:hover,
@@ -625,6 +634,8 @@ footer .icon-part {
 
 .filter-type li {
   flex-basis: calc((100% - 60px) / 3);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-type img {
