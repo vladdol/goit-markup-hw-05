@@ -25,6 +25,17 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
+    <div class="backdrop is-hidden" data-modal>
+      <section class="modal">
+        <button data-modal-close class="close" type="button">
+          <svg width="30" height="30">
+            <use href="./images/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+      </section>
+    </div>
+
+    -->
     <!-- Шапка -->
     <header>
       <div class="container head-container">
@@ -34,9 +45,9 @@
 
           <!-- Навигация -->
           <ul class="nav-links">
-            <li><a class="active" href="./">Студія</a></li>
-            <li><a href="./portfolio.html">Портфоліо</a></li>
-            <li><a href="./">Контакти</a></li>
+            <li><a class="active-nav active static" href="./">Студія</a></li>
+            <li><a class="active-nav" href="./portfolio.html">Портфоліо</a></li>
+            <li><a class="active-nav" href="./">Контакти</a></li>
           </ul>
         </nav>
 
@@ -58,7 +69,7 @@
         </div>
       </div>
     </header>
-    
+
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -68,7 +79,7 @@
             вашого бізнесу
           </h1>
           <div class="button">
-            <button class="hero-button" type="button">Замовити послугу</button>
+            <button class="hero-button" data-modal-open type="button">Замовити послугу</button>
           </div>
         </div>
       </section>
@@ -123,9 +134,28 @@
         <div class="container">
           <h2>Чим ми займаємося</h2>
           <ul class="works-pic">
-            <li><img src="./images/img-1.jpg" alt="клава" width="370" /></li>
-            <li><img src="./images/img-2.jpg" alt="клава i ноут" width="370" /></li>
-            <li><img src="./images/img-3.jpg" alt="палiтра" width="370" /></li>
+            <li>
+              <div class="work-thumb">
+                <img src="./images/img-1.jpg" alt="клава" width="370" /><span class="work-title"
+                  >Десктопні додатки</span
+                >
+              </div>
+            </li>
+            <li>
+              <div class="work-thumb">
+                <img src="./images/img-2.jpg" alt="клава i ноут" width="370" /><span
+                  class="work-title"
+                  >Десктопні додатки</span
+                >
+              </div>
+            </li>
+            <li>
+              <div class="work-thumb">
+                <img src="./images/img-3.jpg" alt="палiтра" width="370" /><span class="work-title"
+                  >Десктопні додатки</span
+                >
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -177,7 +207,7 @@
               <div class="team-title">
                 <h3>Ольга Рєпіна</h3>
                 <p><span lang="en">Frontend Developer</span></p>
-                                <ul class="team-icons">
+                <ul class="team-icons">
                   <li>
                     <a class="team-icon" href="">
                       <svg class="icon-part" width="20" height="20">
@@ -214,7 +244,7 @@
               <div class="team-title">
                 <h3>Микола Тарасов</h3>
                 <p><span lang="en">Marketing</span></p>
-                                <ul class="team-icons">
+                <ul class="team-icons">
                   <li>
                     <a class="team-icon" href="">
                       <svg class="icon-part" width="20" height="20">
@@ -251,7 +281,7 @@
               <div class="team-title">
                 <h3>Михайло Єрмаков</h3>
                 <p><span lang="en">UI Designer</span></p>
-                                <ul class="team-icons">
+                <ul class="team-icons">
                   <li>
                     <a class="team-icon" href="">
                       <svg class="icon-part" width="20" height="20">
@@ -287,7 +317,6 @@
         </div>
       </section>
 
-
       <!-- Постійні клієнти -->
       <section class="customers">
         <div class="container">
@@ -295,55 +324,49 @@
           <ul class="ico-customers">
             <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group"></use>
                 </svg>
               </a>
             </li>
-           <li>
+            <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group-1"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group-2"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group-3"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group-4"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="" class="customers-part">
-                <svg class="customers-one" width="106" height="60" >
+                <svg class="customers-one" width="106" height="60">
                   <use href="./images/symbol-defs.svg#icon-group-5"></use>
                 </svg>
               </a>
             </li>
           </ul>
-
         </div>
-
       </section>
-
-
-
-
     </main>
 
     <!-- Футер -->
@@ -361,38 +384,40 @@
         </div>
         <div class="footer-two">
           <h2>приєднуйтесь</h2>
-            <ul class="team-icons">
-                  <li>
-                    <a class="team-icon" href="">
-                      <svg class="icon-part" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="team-icon" href="">
-                      <svg class="icon-part" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="team-icon" href="">
-                      <svg class="icon-part" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="team-icon" href="">
-                      <svg class="icon-part" width="20" height="20">
-                        <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+          <ul class="team-icons">
+            <li>
+              <a class="team-icon" href="">
+                <svg class="icon-part" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="team-icon" href="">
+                <svg class="icon-part" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="team-icon" href="">
+                <svg class="icon-part" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="team-icon" href="">
+                <svg class="icon-part" width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
