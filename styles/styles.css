@@ -235,7 +235,8 @@ header {
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  pointer-events: none;
+ 
+
 
   transform: opacity 50ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -243,6 +244,7 @@ header {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  overflow:visible;
 }
 
 .modal {
@@ -260,6 +262,10 @@ header {
   padding: 15px;
 }
 
+.modal.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .close {
   color: #000000;
